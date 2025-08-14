@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Random Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Daily Motivation 🌟</h1>
+        <p id="quote">Click below to get inspired!</p>
+        <button onclick="newQuote()">New Quote</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "Believe you can and you're halfway there.",
+            "Push yourself, because no one else is going to do it for you.",
+            "Success is not for the lazy.",
+            "Great things never come from comfort zones.",
+            "Dream it. Wish it. Do it.",
+            "The harder you work for something, the greater you’ll feel when you achieve it.",
+            "Don’t stop until you’re proud."
+        ];
+
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").innerText = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
