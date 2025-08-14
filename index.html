@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flowchart</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+    .flowchart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .shape {
+        padding: 10px 20px;
+        border: 2px solid black;
+        display: inline-block;
+        background-color: white;
+    }
+    .oval {
+        border-radius: 50px;
+        background-color: lightgreen;
+    }
+    .rectangle {
+        border-radius: 5px;
+        background-color: lightblue;
+    }
+    .diamond {
+        width: 150px;
+        height: 80px;
+        background-color: lightyellow;
+        position: relative;
+        transform: rotate(45deg);
+        margin: 20px 0;
+    }
+    .diamond span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 120px;
+    }
+    .parallelogram {
+        background-color: lightpink;
+        transform: skew(-20deg);
+        padding: 10px;
+        display: inline-block;
+    }
+    .parallelogram span {
+        display: block;
+        transform: skew(20deg);
+    }
+    .arrow {
+        width: 2px;
+        height: 20px;
+        background-color: black;
+    }
+</style>
+</head>
+<body>
+
+<div class="flowchart">
+    <div class="shape oval">Start</div>
+    <div class="arrow"></div>
+
+    <div class="shape rectangle">Plan Project</div>
+    <div class="arrow"></div>
+
+    <div class="shape rectangle">Develop Project Locally</div>
+    <div class="arrow"></div>
+
+    <div class="shape rectangle">Push Code to GitHub</div>
+    <div class="arrow"></div>
+
+    <div class="shape rectangle">Connect GitHub Repository to Vercel</div>
+    <div class="arrow"></div>
+
+    <div class="shape rectangle">Deploy Project to Vercel</div>
+    <div class="arrow"></div>
+
+    <div class="diamond"><span>Deployment Successful?</span></div>
+    <div class="arrow"></div>
+
+    <div class="shape rectangle">View "Daily Motivation" Web App</div>
+    <div class="arrow"></div>
+
+    <div class="shape rectangle">Click "New Quote" Button</div>
+    <div class="arrow"></div>
+
+    <div class="parallelogram"><span>Display Daily Motivational Quote</span></div>
+    <div class="arrow"></div>
+
+    <div class="shape oval">End</div>
+</div>
+
+</body>
+</html>
